@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resource Hub</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <h1>BFH Resource Hub</h1>
@@ -139,8 +140,6 @@
         </p>
       </li>
     </ul>
-
-
     <h3>Repositories</h3>
     <ul>
       <li>
@@ -185,7 +184,7 @@
           EWEB - Discover Bern (Angular)
         </a>
       </li>
-
+      </ul>
       <h3>Slides and other</h3>
       <ul>
         <li>
@@ -316,5 +315,12 @@
             Stakeholder- and Riskmanagement
           </a>
         </li>
+        </ul>
+
+        <h3>Courses Jaime JavaScript</h3>
+        <input type="file" id="csvFileInput" accept=".csv" onchange="handleFileSelect(event)">
+        <ul id="linksList"></ul>
+
+
   </body>
 </html>
