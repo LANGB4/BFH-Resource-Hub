@@ -1,30 +1,25 @@
-function readCSVFile(file) {
-  var reader = new FileReader();
-  reader.onload = function (e) {
-    var csvData = e.target.result;
-    var lines = csvData.split("\n");
+import { courses, major, literature, repositories, others } from "./list.js";
 
-    var ul = document.getElementById("linksList");
+document.addEventListener("DOMContentLoaded", function () {
+  renderLinksList(courses, "coursesList");
+  renderLinksList(major, "majorList");
+  renderLinksList(literature, "literatureList");
+  renderLinksList(repositories, "repositoryList");
+  renderLinksList(others, "othersList");
+  // Call renderLinksList for other sections here
+});
 
-    for (var i = 0; i < lines.length; i++) {
-      var linkData = lines[i].split(",");
-      var link = linkData[0];
-      var title = linkData[1];
+function renderLinksList(links, ulId) {
+  var ul = document.getElementById(ulId);
 
-      var li = document.createElement("li");
-      var a = document.createElement("a");
-      a.href = link;
-      a.textContent = title;
-      a.target = "_blank";
+  links.forEach(function (link) {
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.href = link.link;
+    a.textContent = link.title;
+    a.target = "_blank";
 
-      li.appendChild(a);
-      ul.appendChild(li);
-    }
-  };
-  reader.readAsText(file);
-}
-
-function handleFileSelect(event) {
-  var file = event.target.files[0];
-  readCSVFile(file);
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
 }
