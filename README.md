@@ -1,4 +1,4 @@
-# BPTW---Linkcollection
+# BFH - Resource Hub
 
 ## Time spend
 

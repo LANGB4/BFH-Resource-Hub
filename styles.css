@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -23,6 +25,11 @@ ul {
 
 li {
   margin-bottom: 5px;
+}
+
+li p {
+  margin: 0;
+  color: #aaa;
 }
 
 a {
