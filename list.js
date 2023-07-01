@@ -72,6 +72,7 @@ export const literature = [
     title: "Eloquent JavaScript",
     link: "https://eloquentjavascript.net/",
   },
+
   // Add more literature links here...
 ];
 
@@ -174,6 +175,10 @@ export const others = [
   {
     title: "Noun Project - Free Icons",
     link: "https://thenounproject.com/",
+  },
+  {
+    title: "Introduction to User Experience Design (video)",
+    link: "https://learning.oreilly.com/videos/introduction-to-user/9780137534463/",
   },
 ];
 
