@@ -171,6 +171,10 @@ export const others = [
     title: "Stakeholder- and Riskmanagement",
     link: "https://moodle.bfh.ch/pluginfile.php/2083302/mod_resource/content/0/05_Stakeholder-%20und%20Risikomanagement.pdf",
   },
+  {
+    title: "Noun Project - Free Icons",
+    link: "https://thenounproject.com/",
+  },
 ];
 
 // Add more link arrays for other sections here...
