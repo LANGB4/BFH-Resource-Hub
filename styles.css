@@ -25,6 +25,7 @@ ul {
 
 li {
   margin-bottom: 5px;
+  position: relative; /* Needed for positioning hover text */
 }
 
 li p {
@@ -61,4 +62,29 @@ footer a {
 footer a:hover {
   color: #0056b3;
   text-decoration: underline;
+}
+
+.hover-text {
+  position: absolute;
+  background-color: #555;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  display: none;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+/* Tooltip styles */
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  max-width: 300px;
+  z-index: 1000;
+  white-space: pre-wrap;
 }

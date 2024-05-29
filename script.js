@@ -6,20 +6,54 @@ document.addEventListener("DOMContentLoaded", function () {
   renderLinksList(literature, "literatureList");
   renderLinksList(repositories, "repositoryList");
   renderLinksList(others, "othersList");
-  // Call renderLinksList for other sections here
+
+  setupTooltip();
 });
 
 function renderLinksList(links, ulId) {
-  var ul = document.getElementById(ulId);
+  const ul = document.getElementById(ulId);
 
   links.forEach(function (link) {
-    var li = document.createElement("li");
-    var a = document.createElement("a");
+    const li = document.createElement("li");
+    const a = document.createElement("a");
     a.href = link.link;
     a.textContent = link.title;
     a.target = "_blank";
 
     li.appendChild(a);
     ul.appendChild(li);
+
+    li.addEventListener("mouseenter", function () {
+      showTooltip(li, link.summary);
+    });
+
+    li.addEventListener("mouseleave", function () {
+      hideTooltip();
+    });
   });
+}
+
+function setupTooltip() {
+  const tooltip = document.getElementById("tooltip");
+
+  document.addEventListener("mousemove", function (e) {
+    if (tooltip.style.display === "block") {
+      tooltip.style.left = e.pageX + 10 + "px";
+      tooltip.style.top = e.pageY + 10 + "px";
+    }
+  });
+}
+
+function showTooltip(element, text) {
+  const tooltip = document.getElementById("tooltip");
+  tooltip.textContent = text;
+  tooltip.style.display = "block";
+  tooltip.style.left = element.getBoundingClientRect().left + "px";
+  tooltip.style.top = element.getBoundingClientRect().bottom + "px";
+}
+
+function hideTooltip() {
+  const tooltip = document.getElementById("tooltip");
+  tooltip.style.display = "none";
+  tooltip.textContent = "";
 }

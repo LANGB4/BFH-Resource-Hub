@@ -2,38 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resource Hub</title>
+    <title>Course List</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" type="module"></script>
   </head>
   <body>
-    <h1>BFH Resource Hub</h1>
+    <div class="container">
+      <h1>Course List</h1>
+      <h2>Courses</h2>
+      <ul id="coursesList"></ul>
 
-    <h3>Full Courses</h3>
-    <ul id="coursesList"></ul>
+      <h2>Major</h2>
+      <ul id="majorList"></ul>
 
-    <h3>Major</h3>
-    <ul id="majorList"></ul>
+      <h2>Literature</h2>
+      <ul id="literatureList"></ul>
 
-    <h3>Literature</h3>
-    <ul id="literatureList"></ul>
+      <h2>Repositories</h2>
+      <ul id="repositoryList"></ul>
 
-    <h3>Repositories</h3>
-    <ul id="repositoryList"></ul>
+      <h2>Others</h2>
+      <ul id="othersList"></ul>
+    </div>
 
-    <h3>Slides and other</h3>
-    <ul id="othersList"></ul>
+    <div id="tooltip" class="tooltip"></div>
 
-    <footer>
-      <p>
-        <a
-          href="https://github.com/LANGB4/BFH-Resource-Hub/blob/main/README.md"
-          target="_blank"
-          >README</a
-        >
-      </p>
-    </footer>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
