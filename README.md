@@ -18,7 +18,7 @@ Please note that a **login to the moodle platform** is required for most of the 
 
 This project is a personal endeavor, but contributions and suggestions are welcome. If you have any additional links or resources that you believe would be valuable to include, please feel free to submit a pull request. Together, we can expand and improve the resource hub to benefit the broader community.
 
-## Time Investment
+## Time Investment V1
 
 | Task                    | Time Investment |
 | ----------------------- | --------------- |
@@ -28,6 +28,21 @@ This project is a personal endeavor, but contributions and suggestions are welco
 | Adding HTML and CSS     | 6h              |
 | JavaScript              | 6h              |
 | Documentation           | 4h              |
+
+## Time Investment V2
+
+| Task                        | Time Investment |
+| --------------------------- | --------------- |
+| Admin setup and kickoff     | 4h              |
+| Finding relevant links      | 4h              |
+| Writing Tooltip Summaries   | 8h              |
+| Updating JavaScript and CSS | 10h             |
+| Bugfixing                   | 4h              |
+| Documentation               | 6h              |
+
+## Changelog V2
+
+Added hover functionality for tooltips: When hovering over a link, a tooltip now appears displaying a brief summary of the link. This enhancement required updates to both the JavaScript and CSS files. The JavaScript was modified to handle the hover events, display the tooltip text, and position the tooltip correctly. The CSS was updated to style the tooltip, ensuring it appears in a readable format and position. This feature enhances user experience by providing additional context without the need to click on the links.
 
 ---
 
