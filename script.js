@@ -1,5 +1,4 @@
 import { courses, major, literature, repositories, others } from "./list.js";
-
 document.addEventListener("DOMContentLoaded", function () {
   renderLinksList(courses, "coursesList");
   renderLinksList(major, "majorList");
@@ -23,11 +22,11 @@ function renderLinksList(links, ulId) {
     li.appendChild(a);
     ul.appendChild(li);
 
-    li.addEventListener("mouseenter", function () {
-      showTooltip(li, link.summary);
+    a.addEventListener("mouseenter", function () {
+      showTooltip(a, link.summary);
     });
 
-    li.addEventListener("mouseleave", function () {
+    a.addEventListener("mouseleave", function () {
       hideTooltip();
     });
   });
